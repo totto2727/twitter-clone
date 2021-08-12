@@ -1,0 +1,21 @@
+{
+	"name": "Node.js",
+	"dockerComposeFile": "../../docker-compose.yaml",
+	"service": "twitter-frontend",
+	"workspaceFolder": "/workspace/twitter-frontend",
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"postCreateCommand": "sudo chown -R node:node . & npm i",
+	"postAttachCommand": "npm run dev",
+	"remoteUser": "node"
+}

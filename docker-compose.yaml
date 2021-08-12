@@ -1,0 +1,48 @@
+version: "3"
+services:
+  twitter-frontend:
+    build:
+      context: ./frontend/.devcontainer
+      dockerfile: Dockerfile
+      args:
+        - VARIANT=16
+    volumes:
+      - ./frontend:/workspace
+      - /workspace/twitter-frontend/node_modules
+    ports:
+     - "3000:3000"
+    environment:
+      TZ: "Asia/Tokyo"
+    depends_on: 
+      - twitter-backend
+    tty: true
+
+  twitter-backend:
+    build:
+      context: ./backend/.devcontainer
+      dockerfile: Dockerfile
+      args: 
+        - VARIANT=1
+        - NODE_VERSION=lts/*
+    cap_add: 
+      - SYS_PTRACE
+    security_opt: 
+      - seccomp:unconfined
+    volumes:
+      - ./backend:/workspace
+    environment:
+      TZ: "Asia/Tokyo"
+    depends_on: 
+      - twitter-database
+    tty: true
+
+  twitter-database:
+    image: postgres:11-stretch
+    ports:
+      - 5432:5432
+    volumes:
+      - ./database:/var/lib/postgres/data
+      - ./init_db:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
