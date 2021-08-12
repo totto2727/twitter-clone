@@ -9,11 +9,12 @@ services:
     volumes:
       - ./frontend:/workspace
       - /workspace/twitter-frontend/node_modules
+      - ~/.gitconfg:/etc/gitconfig
     ports:
      - "3000:3000"
     environment:
       TZ: "Asia/Tokyo"
-    depends_on: 
+    depends_on:
       - twitter-backend
     tty: true
 
@@ -21,18 +22,20 @@ services:
     build:
       context: ./backend/.devcontainer
       dockerfile: Dockerfile
-      args: 
+      args:
         - VARIANT=1
         - NODE_VERSION=lts/*
-    cap_add: 
-      - SYS_PTRACE
-    security_opt: 
-      - seccomp:unconfined
     volumes:
       - ./backend:/workspace
+      - ~/.gitconfg:/etc/gitconfig
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
     environment:
       TZ: "Asia/Tokyo"
-    depends_on: 
+    depends_on:
       - twitter-database
     tty: true
 
