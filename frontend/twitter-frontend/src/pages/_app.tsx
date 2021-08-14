@@ -1,7 +1,13 @@
 import type { AppProps } from 'next/app'
-import '../../styles/globals.css'
+import './globals.css'
+import AppHeader from '../components/templates/AppHeader'
 
-function MyApp({ Component, pageProps }: AppProps):JSX.Element {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  return (
+    <>
+      <AppHeader />
+      <Component {...pageProps} />
+    </>
+  )
 }
 export default MyApp

@@ -10,7 +10,9 @@
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
 		"bradlc.vscode-tailwindcss",
-		"csstools.postcss"
+		"csstools.postcss",
+		"orta.vscode-jest",
+		"eg2.vscode-npm-script"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
