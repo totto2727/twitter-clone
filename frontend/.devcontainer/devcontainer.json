@@ -4,7 +4,9 @@
 	"service": "twitter-frontend",
 	"workspaceFolder": "/workspace/twitter-frontend",
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		"editor.tabSize": 2
+	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"dbaeumer.vscode-eslint",

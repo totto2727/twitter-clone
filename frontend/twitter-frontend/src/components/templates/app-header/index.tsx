@@ -1,6 +1,6 @@
 import Presenter from './presenter'
 
-const AppHeader: React.FC = () => {
+const AppHeader = () => {
   return <Presenter />
 }
 
