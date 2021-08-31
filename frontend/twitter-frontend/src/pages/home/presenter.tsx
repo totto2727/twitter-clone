@@ -1,6 +1,6 @@
-const Presenter: React.FC = () => {
+const Presenter = () => {
   return (
-    <main>
+    <>
       <div>
         <p>Home</p>
       </div>
@@ -13,7 +13,7 @@ const Presenter: React.FC = () => {
           <p>timeline</p>
         </div>
       </article>
-    </main>
+    </>
   )
 }
 

@@ -16,9 +16,10 @@ const Presenter = ({
   children,
   iconProps,
 }: IconLinkProps) => {
+  const height=parseFloat(iconProps?.size||26)+parseFloat(iconProps?.strokeWidth)
   return (
     <Link href={url}>
-      <a className={className || ''}>
+      <a className={className}>
         <Icon {...iconProps} />
         {children}
       </a>

@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   extends: [
     'next',
@@ -8,13 +10,19 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
-  plugins: ['jest'],
+  plugins: ['jest', "import"],
   parserOptions: {
     project: './tsconfig.json',
   },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        config: path.join(__dirname, './webpack.config.js'),
+        alwaysTryTypes: true
+      },
+    },
+  },
   rules: {
-    // import の順番をルール化
-    // 参考：https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     'import/order': [
       'error',
       {

@@ -1,7 +1,7 @@
 import Presenter from "./presenter"
 
-const AppAside = () => {
+const Aside = () => {
   return <Presenter />
 }
 
-export default AppAside
+export default Aside

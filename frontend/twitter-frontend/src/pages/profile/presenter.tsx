@@ -4,9 +4,9 @@ export type Props = {
 
 const Presenter: React.VFC<Props> = ({ userId }) => {
   return (
-    <main>
+    <>
       <h1>{userId}</h1>
-    </main>
+    </>
   )
 }
 

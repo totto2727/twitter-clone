@@ -1,5 +1,5 @@
-import LinkIcon from '../../atoms/icon-link'
-import { IconLinkProps } from '../../atoms/icon-link/presenter'
+import LinkIcon from '../icon-link'
+import { IconLinkProps } from '../icon-link/presenter'
 
 export type IconTextLinkProps = Omit<IconLinkProps, 'children'> & {
   text?: string
@@ -9,7 +9,7 @@ export type IconTextLinkProps = Omit<IconLinkProps, 'children'> & {
 const Presenter = ({ text, textStyle, ...props }: IconTextLinkProps) => {
   return (
     <LinkIcon {...props}>
-      <p className={textStyle}>{text}</p>
+      {text && <p className={textStyle}>{text}</p>}
     </LinkIcon>
   )
 }
