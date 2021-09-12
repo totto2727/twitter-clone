@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         </header>
         <main
           className={
-            'border-r border-l h-full w-full flex-auto max-w-[37.5rem]'
+            'border h-full w-full flex-auto max-w-[37.5rem]'
           }>
           <Component {...pageProps} />
         </main>

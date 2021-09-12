@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Presenter, { Props } from './presenter'
+import Presenter, { Props } from './Presenter'
 
 const Profile: React.VFC<void> = () => {
   const props: Props = {

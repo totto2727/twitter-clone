@@ -1,7 +1,11 @@
-import Presenter, { HeaderNavLiProps } from './presenter'
+import { useRouter } from 'next/router'
+import Presenter, { HeaderNavLiProps } from './Presenter'
 
 const HeaderNavLi = (props: HeaderNavLiProps) => {
-  return <Presenter {...props} />
+  const router = useRouter()
+  const current = props.current || router.asPath === props.url
+
+  return <Presenter {...props} current={current} />
 }
 
 export default HeaderNavLi

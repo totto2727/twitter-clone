@@ -1,27 +1,26 @@
-import { FaTwitter, FaUser } from 'react-icons/fa'
-import { HeaderNavLiProps } from './header-nav-li/presenter'
-import Presenter from './presenter'
+import { FaTwitter, FaUser, FaHashtag } from 'react-icons/fa'
+import { FiHash } from 'react-icons/fi'
+import { HiOutlineUser } from 'react-icons/hi'
+import Presenter from './Presenter'
+import { HeaderNavLiProps } from './header-nav-li/Presenter'
 
 const links: HeaderNavLiProps[] = [
   {
     url: '/home',
     Icon: FaTwitter,
-    iconProps: {
-      title: 'Home',
-      size: '30px',
-    },
-    className: 'hidden xs:block',
+    iconProps: { size: 32 },
+    current: true,
+  },
+  {
+    url: '/trend',
+    text: 'トレンド',
+    Icon: FiHash,
+    iconProps: { fill: 'white' },
   },
   {
     url: '/profile',
     text: 'プロフィール',
-    Icon: FaUser,
-    iconProps: {
-      title: 'Profile',
-      fillOpacity: 0,
-      stroke: '#d9d9d9',
-      strokeWidth: 40,
-    },
+    Icon: HiOutlineUser,
   },
 ]
 

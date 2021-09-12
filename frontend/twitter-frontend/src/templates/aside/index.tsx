@@ -1,4 +1,4 @@
-import Presenter from "./presenter"
+import Presenter from "./Presenter"
 
 const Aside = () => {
   return <Presenter />

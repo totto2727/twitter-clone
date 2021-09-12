@@ -1,7 +1,7 @@
-import Presenter, { IconLinkProps } from './presenter'
+import Presenter, { IconLinkProps } from './Presenter'
 
-const LinkIcon = (props:IconLinkProps) => {
+const IconLink = (props:IconLinkProps) => {
   return <Presenter {...props} />
 }
 
-export default LinkIcon
+export default IconLink

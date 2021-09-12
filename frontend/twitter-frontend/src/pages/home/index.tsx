@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Presenter from './presenter'
+import Presenter from './Presenter'
 
 const Home: React.FC = () => {
   return (
