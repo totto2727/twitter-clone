@@ -15,11 +15,11 @@ const Presenter = ({
 }: HeaderNavLiProps) => {
   const props_: IconLinkProps = {
     className:
-      'p-3 flex xl:inline-flex items-center justify-center xl:justify-start gap-8 border transition hover:bg-white hover:bg-opacity-10 duration-300',
+      'p-3 flex xl:inline-flex items-center justify-center xl:justify-start gap-8 transition hover:bg-white hover:bg-opacity-10 duration-300',
     iconProps: {
       size: 26,
       fill: current ?'white':undefined,
-      strokeWidth: current ? 20 : 0,
+      strokeWidth: current ? 3 : 2,
       ...iconProps,
     },
     ...props,
@@ -27,7 +27,7 @@ const Presenter = ({
   return (
     <li className={className}>
       <IconLink {...props_}>
-        {text && <p className='hidden xl:block text-xl border'>{text}</p>}
+        {text && <p className='hidden xl:block text-xl'>{text}</p>}
       </IconLink>
     </li>
   )

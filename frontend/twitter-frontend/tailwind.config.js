@@ -3,16 +3,6 @@ module.exports = {
   purge: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      twitter: [
-        '"Segoe UI"',
-        'Meiryo',
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'sans-serif',
-      ],
-    },
     screens: {
       xs: { raw: '(min-height: 500px) and (min-width:480px)' },
       sm: { raw: '(min-height: 500px) and (min-width:640px)', min: '640px' }, //'640px',
@@ -21,7 +11,21 @@ module.exports = {
       xl: { raw: '(min-height: 500px) and (min-width:1280px)' }, //'1280px',
       '2xl': { raw: '(min-height: 500px) and (min-width:1536px)' }, //'1536px',
     },
-    extend: {},
+    extend: {
+        colors: {
+          "alt-white": "#D9D9D9"
+        },
+        fontFamily: {
+          twitter: [
+            '"Segoe UI"',
+            'Meiryo',
+            'system-ui',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            'sans-serif',
+          ],
+        },
+    },
   },
   variants: {
     extend: {},

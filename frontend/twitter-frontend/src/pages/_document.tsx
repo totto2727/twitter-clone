@@ -32,7 +32,7 @@ class MyDocument extends Document {
         </Head>
         <body
           className={
-            'bg-white text-black dark:bg-black dark:text-white font-twitter'
+            'bg-white text-black dark:bg-black dark:text-alt-white font-twitter text-[15px]'
           }>
           <Main />
           <NextScript />

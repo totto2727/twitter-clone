@@ -1,4 +1,4 @@
-import { FaTwitter, FaUser, FaHashtag } from 'react-icons/fa'
+import { FaTwitter } from 'react-icons/fa'
 import { FiHash } from 'react-icons/fi'
 import { HiOutlineUser } from 'react-icons/hi'
 import Presenter from './Presenter'
@@ -8,14 +8,13 @@ const links: HeaderNavLiProps[] = [
   {
     url: '/home',
     Icon: FaTwitter,
-    iconProps: { size: 32 },
+    iconProps: { size: 28 },
     current: true,
   },
   {
     url: '/trend',
     text: 'トレンド',
     Icon: FiHash,
-    iconProps: { fill: 'white' },
   },
   {
     url: '/profile',
