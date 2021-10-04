@@ -5,8 +5,6 @@ module.exports = {
     'next',
     'next/core-web-vitals',
     'prettier',
-    'plugin:import/recommended',
-    'plugin:import/warnings',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],

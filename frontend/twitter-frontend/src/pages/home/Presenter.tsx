@@ -6,7 +6,7 @@ const Presenter = () => {
       </div>
       <div className={'w-full border p-1'}>
         <form className={'flex'}>
-          <div>アイコンwwwww</div>
+          <div>アイコン</div>
           <div className={'w-full'}>
             <input
               type='text'
